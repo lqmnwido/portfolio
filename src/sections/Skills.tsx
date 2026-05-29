@@ -2,42 +2,95 @@ import Section from '../components/Section';
 import { motion } from 'framer-motion';
 
 const Skills = () => {
-  const skills = [
-    { name: 'React / Next.js', level: '95%' },
-    { name: 'TypeScript', level: '90%' },
-    { name: 'Node.js / Express', level: '85%' },
-    { name: 'Tailwind CSS', level: '95%' },
-    { name: 'PostgreSQL / MongoDB', level: '80%' },
-    { name: 'Docker / Git', level: '85%' },
+  const getIconUrl = (name: string) => `https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/${name}.png`;
+
+  const categories = [
+    {
+      title: 'Programming Languages',
+      skills: [
+        { name: 'PHP', icon: getIconUrl('php') },
+        { name: 'JavaScript', icon: getIconUrl('javascript') },
+        { name: 'TypeScript', icon: getIconUrl('typescript') },
+        { name: 'Java', icon: getIconUrl('java') },
+        { name: 'Python', icon: getIconUrl('python') },
+        { name: 'C', icon: getIconUrl('c') },
+        { name: 'Rust', icon: getIconUrl('rust'), isWhite: true },
+      ]
+    },
+    {
+      title: 'Technical Stack (Frameworks)',
+      skills: [
+        { name: 'Laravel', icon: getIconUrl('laravel') },
+        { name: 'Blade', icon: 'https://cdn.simpleicons.org/laravel' },
+        { name: 'React', icon: getIconUrl('reactjs') },
+        { name: 'Next.js', icon: getIconUrl('nextjs') },
+        { name: 'Axum', icon: getIconUrl('rust'), isWhite: true },
+        { name: 'FastAPI', icon: 'https://cdn.simpleicons.org/fastapi' },
+        { name: 'MySQL', icon: getIconUrl('mysql') },
+        { name: 'PostgreSQL', icon: getIconUrl('postgres') },
+        { name: 'SQLite', icon: 'https://cdn.simpleicons.org/sqlite' },
+        { name: 'NoSQL', icon: getIconUrl('sqlitebrowser') },
+        { name: 'Temporal', icon: 'https://cdn.simpleicons.org/temporal/white' },
+        { name: 'Qdrant', icon: getIconUrl('qdrant') },
+        { name: 'Whisper', icon: getIconUrl('openai'), isWhite: true }, // Whisper is by OpenAI
+        { name: 'Ollama', icon: getIconUrl('ollama'), isWhite: true },
+        { name: 'Tailwind CSS', icon: getIconUrl('tailwind') },
+      ]
+    },
+    {
+      title: 'Deployment & DevOps',
+      skills: [
+        { name: 'Linux', icon: getIconUrl('linux') },
+        { name: 'Git', icon: getIconUrl('git') },
+        { name: 'Nginx', icon: getIconUrl('nginx') },
+        { name: 'Apache', icon: getIconUrl('apache') },
+      ]
+    }
   ];
 
   return (
     <Section id="skills">
-      <h2 style={{ fontSize: '3rem', marginBottom: '4rem', textAlign: 'center' }}>Technical Stack</h2>
+      <h2 style={{ fontSize: '3rem', marginBottom: '4rem', textAlign: 'center' }}>Knowledge & Tech Stack</h2>
       
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
-        {skills.map((skill, index) => (
-          <motion.div 
-            key={skill.name}
-            whileHover={{ y: -5 }}
-            style={{ 
-              padding: '2rem', 
-              background: 'rgba(255,255,255,0.02)', 
-              border: '1px solid rgba(255,255,255,0.05)',
-              borderRadius: '1rem'
-            }}
-          >
-            <h3 style={{ fontSize: '1.25rem', marginBottom: '1.5rem' }}>{skill.name}</h3>
-            <div style={{ width: '100%', height: '4px', background: 'rgba(255,255,255,0.1)', borderRadius: '2px', overflow: 'hidden' }}>
-              <motion.div 
-                initial={{ width: 0 }}
-                whileInView={{ width: skill.level }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, delay: 0.2 + index * 0.1 }}
-                style={{ height: '100%', background: 'var(--accent-color)' }}
-              />
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '4rem' }}>
+        {categories.map((category) => (
+          <div key={category.title}>
+            <h3 style={{ fontSize: '1.5rem', marginBottom: '2rem', color: 'var(--accent-color)', borderLeft: '4px solid var(--accent-color)', paddingLeft: '1rem' }}>
+              {category.title}
+            </h3>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem' }}>
+              {category.skills.map((skill) => (
+                <motion.div 
+                  key={skill.name}
+                  whileHover={{ y: -5, background: 'rgba(255,255,255,0.04)' }}
+                  style={{ 
+                    padding: '1.5rem', 
+                    background: 'rgba(255,255,255,0.02)', 
+                    border: '1px solid rgba(255,255,255,0.05)',
+                    borderRadius: '1rem',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '1rem'
+                  }}
+                >
+                  <img 
+                    src={skill.icon} 
+                    alt={skill.name} 
+                    style={{ 
+                      width: '32px', 
+                      height: '32px', 
+                      objectFit: 'contain',
+                      filter: (skill as any).isWhite ? 'brightness(0) invert(1)' : 'none'
+                    }}
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = 'https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/code.png';
+                    }}
+                  />
+                  <h3 style={{ fontSize: '1.125rem', margin: 0 }}>{skill.name}</h3>
+                </motion.div>
+              ))}
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </Section>

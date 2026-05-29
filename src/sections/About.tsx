@@ -7,10 +7,10 @@ const About = () => {
         <div>
           <h2 style={{ fontSize: '3rem', marginBottom: '2rem' }}>About Me</h2>
           <p style={{ color: 'var(--text-secondary)', fontSize: '1.125rem', marginBottom: '1.5rem' }}>
-            I am a results-driven Software Engineer with a passion for building scalable web applications and high-performance user interfaces. 
+            I am a Software Engineer and a recent graduate with a B.S. in Computer Science (Software Engineering) from Universiti Malaysia Pahang Al-Sultan Abdullah (UMPSA).
           </p>
           <p style={{ color: 'var(--text-secondary)', fontSize: '1.125rem' }}>
-            With a focus on clean code and modern frontend frameworks, I strive to create seamless digital experiences that are both functional and visually striking.
+            I specialize in building robust applications using PHP (Laravel), Java, and Python. My interest lies at the intersection of traditional software engineering and emerging AI technologies, where I leverage NLP tools like Whisper and Ollama to create intelligent solutions.
           </p>
         </div>
         

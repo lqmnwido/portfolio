@@ -4,6 +4,8 @@ import Navbar from './components/Navbar';
 import Hero from './sections/Hero';
 import About from './sections/About';
 import Skills from './sections/Skills';
+import Education from './sections/Education';
+import Experience from './sections/Experience';
 import Projects from './sections/Projects';
 import Contact from './sections/Contact';
 
@@ -12,13 +14,13 @@ import 'lenis/dist/lenis.css';
 function App() {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.2,
+      duration: 1,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: 'vertical',
       gestureOrientation: 'vertical',
       smoothWheel: true,
-      wheelMultiplier: 1,
-      touchMultiplier: 2,
+      wheelMultiplier: 0.8,
+      touchMultiplier: 1.5,
       infinite: false,
     });
 
@@ -61,6 +63,8 @@ function App() {
       <main>
         <Hero />
         <About />
+        <Education />
+        <Experience />
         <Skills />
         <Projects />
         <Contact />

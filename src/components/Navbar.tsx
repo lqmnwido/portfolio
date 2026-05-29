@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 const Navbar = () => {
   const navItems = [
     { name: 'About', href: '#about' },
+    { name: 'Education', href: '#education' },
+    { name: 'Experience', href: '#experience' },
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: '#contact' },
@@ -23,9 +25,10 @@ const Navbar = () => {
         justifyContent: 'space-between',
         alignItems: 'center',
         zIndex: 100,
-        backdropFilter: 'blur(10px)',
+        backdropFilter: 'blur(8px)',
+        WebkitBackdropFilter: 'blur(8px)',
         borderBottom: '1px solid rgba(255,255,255,0.05)',
-        background: 'rgba(13, 13, 13, 0.7)',
+        background: 'rgba(13, 13, 13, 0.8)',
       }}
     >
       <div style={{ fontWeight: 700, fontSize: '1.25rem', letterSpacing: '-0.02em' }}>

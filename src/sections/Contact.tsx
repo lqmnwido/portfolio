@@ -1,5 +1,5 @@
 import Section from '../components/Section';
-import { Mail, Link2, Code2, Send } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 const Contact = () => {
   return (
@@ -11,17 +11,76 @@ const Contact = () => {
         </p>
         
         <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', marginBottom: '6rem' }}>
-          <a href="mailto:contact@lqmnhafiz.com" style={{ padding: '1rem', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '50%' }}>
-            <Mail size={24} />
+          <a href="mailto:luqmanhafiz247@gmail.com" style={{ 
+            width: '48px',
+            height: '48px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            background: 'rgba(255,255,255,0.02)', 
+            border: '1px solid rgba(255,255,255,0.05)', 
+            borderRadius: '50%',
+            transition: 'all 0.3s ease'
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
+            e.currentTarget.style.borderColor = 'var(--accent-color)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = 'rgba(255,255,255,0.02)';
+            e.currentTarget.style.borderColor = 'rgba(255,255,255,0.05)';
+          }}>
+            <Mail size={20} />
           </a>
-          <a href="https://linkedin.com/in/lqmnhafiz" target="_blank" rel="noopener noreferrer" style={{ padding: '1rem', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '50%' }}>
-            <Link2 size={24} />
+          <a href="https://www.linkedin.com/in/lqmnhafiz/" target="_blank" rel="noopener noreferrer" style={{ 
+            width: '48px',
+            height: '48px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            background: 'rgba(255,255,255,0.02)', 
+            border: '1px solid rgba(255,255,255,0.05)', 
+            borderRadius: '50%',
+            transition: 'all 0.3s ease'
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
+            e.currentTarget.style.borderColor = 'var(--accent-color)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = 'rgba(255,255,255,0.02)';
+            e.currentTarget.style.borderColor = 'rgba(255,255,255,0.05)';
+          }}>
+            <img 
+              src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/linkedin.svg" 
+              alt="LinkedIn" 
+              style={{ width: '20px', height: '20px',  }} 
+            />
           </a>
-          <a href="https://github.com/lqmnhafiz" target="_blank" rel="noopener noreferrer" style={{ padding: '1rem', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '50%' }}>
-            <Code2 size={24} />
-          </a>
-          <a href="#" style={{ padding: '1rem', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '50%' }}>
-            <Send size={24} />
+          <a href="https://github.com/lqmnwido" target="_blank" rel="noopener noreferrer" style={{ 
+            width: '48px',
+            height: '48px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            background: 'rgba(255,255,255,0.02)', 
+            border: '1px solid rgba(255,255,255,0.05)', 
+            borderRadius: '50%',
+            transition: 'all 0.3s ease'
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
+            e.currentTarget.style.borderColor = 'var(--accent-color)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = 'rgba(255,255,255,0.02)';
+            e.currentTarget.style.borderColor = 'rgba(255,255,255,0.05)';
+          }}>
+            <img 
+              src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/github.svg" 
+              alt="GitHub" 
+              style={{ width: '20px', height: '20px', filter: 'brightness(0) invert(1)' }} 
+            />
           </a>
         </div>
         

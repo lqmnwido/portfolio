@@ -53,7 +53,7 @@ const Hero = () => {
             fontWeight: 600
           }}
         >
-          Software Engineer
+          AI/ML Engineer | Software Engineer
         </motion.p>
         
         <motion.h1 
@@ -76,7 +76,7 @@ const Hero = () => {
             color: 'var(--text-secondary)'
           }}
         >
-          Crafting high-performance digital experiences with a focus on clean code and atmospheric design.
+          Building high-performance software and AI-driven solutions with PHP, Java, Rust and Python.
         </motion.p>
         
         <motion.div 
@@ -89,11 +89,13 @@ const Hero = () => {
               padding: '1rem 2rem', 
               border: '1px solid rgba(255,255,255,0.1)', 
               borderRadius: '2rem',
-              background: 'rgba(255,255,255,0.05)',
-              backdropFilter: 'blur(10px)',
+              background: 'rgba(255,255,255,0.03)',
               fontSize: '0.875rem',
-              fontWeight: 500
+              fontWeight: 500,
+              transition: 'background 0.3s ease'
             }}
+            onMouseEnter={(e) => (e.currentTarget.style.background = 'rgba(255,255,255,0.08)')}
+            onMouseLeave={(e) => (e.currentTarget.style.background = 'rgba(255,255,255,0.03)')}
           >
             Explore Work
           </a>
