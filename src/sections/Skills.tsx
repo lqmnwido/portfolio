@@ -20,21 +20,19 @@ const Skills = () => {
     {
       title: 'Technical Stack (Frameworks)',
       skills: [
-        { name: 'Laravel', icon: getIconUrl('laravel') },
+        { name: 'Laravel', icon: 'https://cdn.simpleicons.org/laravel' },
         { name: 'Blade', icon: 'https://cdn.simpleicons.org/laravel' },
         { name: 'React', icon: getIconUrl('reactjs') },
+        { name: 'Spring Boot', icon: getIconUrl('springboot-initializer') },
         { name: 'Next.js', icon: getIconUrl('nextjs') },
         { name: 'Axum', icon: getIconUrl('rust'), isWhite: true },
         { name: 'FastAPI', icon: 'https://cdn.simpleicons.org/fastapi' },
+        { name: 'Tailwind CSS', icon: getIconUrl('tailwind') },
+        { name: 'Bootstrap', icon: getIconUrl('bootstrap') },
         { name: 'MySQL', icon: getIconUrl('mysql') },
         { name: 'PostgreSQL', icon: getIconUrl('postgres') },
         { name: 'SQLite', icon: 'https://cdn.simpleicons.org/sqlite' },
-        { name: 'NoSQL', icon: getIconUrl('sqlitebrowser') },
-        { name: 'Temporal', icon: 'https://cdn.simpleicons.org/temporal/white' },
-        { name: 'Qdrant', icon: getIconUrl('qdrant') },
-        { name: 'Whisper', icon: getIconUrl('openai'), isWhite: true }, // Whisper is by OpenAI
-        { name: 'Ollama', icon: getIconUrl('ollama'), isWhite: true },
-        { name: 'Tailwind CSS', icon: getIconUrl('tailwind') },
+        { name: 'MongoDB', icon: getIconUrl('mongodb') },
       ]
     },
     {
@@ -44,6 +42,12 @@ const Skills = () => {
         { name: 'Git', icon: getIconUrl('git') },
         { name: 'Nginx', icon: getIconUrl('nginx') },
         { name: 'Apache', icon: getIconUrl('apache') },
+        { name: 'MinIO', icon: getIconUrl('minio'), isWhite: true},
+        { name: 'Temporal', icon: 'https://cdn.simpleicons.org/temporal/white' },
+        { name: 'Qdrant', icon: getIconUrl('qdrant') },
+        { name: 'Whisper', icon: getIconUrl('openai'), isWhite: true }, // Whisper is by OpenAI
+        { name: 'Ollama', icon: getIconUrl('ollama'), isWhite: true },
+        { name: 'vLLM', icon: getIconUrl('vllm')},
       ]
     }
   ];

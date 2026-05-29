@@ -1,6 +1,20 @@
-import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   const navItems = [
     { name: 'About', href: '#about' },
     { name: 'Education', href: '#education' },
@@ -31,11 +45,49 @@ const Navbar = () => {
         background: 'rgba(13, 13, 13, 0.8)',
       }}
     >
-      <div style={{ fontWeight: 700, fontSize: '1.25rem', letterSpacing: '-0.02em' }}>
+      <div style={{ fontWeight: 700, fontSize: '1.25rem', letterSpacing: '-0.02em', zIndex: 101 }}>
         LH.
       </div>
       
-      <ul style={{ display: 'flex', gap: '2rem' }}>
+      <button 
+        className="mobile-menu-btn"
+        onClick={() => setIsOpen(!isOpen)}
+        aria-label="Toggle menu"
+      >
+        {isOpen ? '✕' : '☰'}
+      </button>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.ul 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="nav-links mobile-open"
+          >
+            {navItems.map((item) => (
+              <li key={item.name}>
+                <a 
+                  href={item.href} 
+                  onClick={() => setIsOpen(false)}
+                  style={{ 
+                    fontSize: '1.5rem', 
+                    fontWeight: 500, 
+                    color: 'var(--text-secondary)',
+                    transition: 'color 0.2s ease'
+                  }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = '#fff')}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-secondary)')}
+                >
+                  {item.name}
+                </a>
+              </li>
+            ))}
+          </motion.ul>
+        )}
+      </AnimatePresence>
+
+      <ul className="nav-links desktop-only">
         {navItems.map((item) => (
           <li key={item.name}>
             <a 

@@ -8,7 +8,7 @@ const Projects = () => {
       projects: [
         {
           title: 'MyPelantikan',
-          description: 'A comprehensive appointment management system built for streamlined scheduling and resource allocation.',
+          description: 'A modern government management system for handling personnel profiles, appointment records, and service history in a centralized, efficient, and user-friendly platform.',
           tags: ['Vue.js', 'Laravel', 'MySQL', 'Bootstrap'],
           image: '/projects/MyPelantikan.png',
           link: '#',
@@ -30,7 +30,7 @@ const Projects = () => {
         {
           title: 'RojakFace ( Face Recognition in the Group Photo )',
           description: 'A modern face recognition library featuring automatic learning, vector search via Qdrant, and hybrid storage for high-accuracy detection.',
-          tags: ['Python', 'imgbeddings', 'YuNet', 'OpenCV', 'Qdrant', 'PostgreSQL', 'MinIO'],
+          tags: ['React', 'Python', 'imgbeddings', 'YuNet', 'OpenCV', 'Qdrant', 'PostgreSQL', 'MinIO'],
           image: '/projects/RojakFace.jpg',
           link: 'https://pypi.org/project/RojakFace/',
           github: 'https://github.com/lqmnwido/RojakFace'

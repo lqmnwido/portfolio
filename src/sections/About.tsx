@@ -6,10 +6,10 @@ const About = () => {
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', alignItems: 'center' }}>
         <div>
           <h2 style={{ fontSize: '3rem', marginBottom: '2rem' }}>About Me</h2>
-          <p style={{ color: 'var(--text-secondary)', fontSize: '1.125rem', marginBottom: '1.5rem' }}>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '1.125rem', marginBottom: '1.5rem', textAlign: 'justify' }}>
             I am a Software Engineer and a recent graduate with a B.S. in Computer Science (Software Engineering) from Universiti Malaysia Pahang Al-Sultan Abdullah (UMPSA).
           </p>
-          <p style={{ color: 'var(--text-secondary)', fontSize: '1.125rem' }}>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '1.125rem', textAlign: 'justify' }}>
             I specialize in building robust applications using PHP (Laravel), Java, and Python. My interest lies at the intersection of traditional software engineering and emerging AI technologies, where I leverage NLP tools like Whisper and Ollama to create intelligent solutions.
           </p>
         </div>
