@@ -45,7 +45,16 @@ const Navbar = () => {
         background: 'rgba(13, 13, 13, 0.8)',
       }}
     >
-      <div style={{ fontWeight: 700, fontSize: '1.25rem', letterSpacing: '-0.02em', zIndex: 101 }}>
+      <div 
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        style={{ 
+          fontWeight: 700, 
+          fontSize: '1.25rem', 
+          letterSpacing: '-0.02em', 
+          zIndex: 101,
+          cursor: 'pointer'
+        }}
+      >
         LH.
       </div>
       
