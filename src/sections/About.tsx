@@ -22,7 +22,7 @@ const About = () => {
           
           <div>
             <h3 style={{ fontSize: '0.875rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--accent-color)', marginBottom: '1rem' }}>Location</h3>
-            <p style={{ fontSize: '1.125rem', color: '#fff' }}>Based in Malaysia, working globally.</p>
+            <p style={{ fontSize: '1.25rem', color: '#fff' }}>Based in Malaysia, working globally.</p>
           </div>
         </div>
       </div>
